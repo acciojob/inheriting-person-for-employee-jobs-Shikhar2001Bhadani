@@ -12,7 +12,8 @@ function Employee(name, age, jobTitle) {
     this.jobTitle = jobTitle;
 }
 
-Employee.prototype = Object.create(Person.prototype); // Inherit from Person
+// Correctly inherit from Person
+Employee.prototype = Object.create(Person.prototype);
 Employee.prototype.constructor = Employee;
 
 Employee.prototype.jobGreet = function() {
